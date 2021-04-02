@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
-// import { Service } from "../types/Service";
-// import { Starship } from "../types/Starship";
 
-// export interface Starships {
-//   results: Starship[];
-// }
 const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 
 const useFetchHooks = () => {

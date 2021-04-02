@@ -1,0 +1,220 @@
+$blue: #13A4EC
+$white: #FFFFFF
+$border: #E8ECF0
+$icon: #D5D9DD
+$bg: #E5E5E5
+$green: #2AC45D
+$icon-default: #AAB2BB
+$btn-outline: 2px solid $blue
+$font: #2D3A41
+$selection: #56CCF2
+$box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(169, 179, 187, 0.5)
+
+
+frame p::-moz-selection
+  color: $white !important
+  background: $selection !important
+  opacity: 0.3
+
+frame p::selection
+  color: $white !important
+  background: $selection !important
+  opacity: 0.3
+
+.tox
+  .tox-toolbar, .tox-toolbar__overflow, .tox-toolbar__primary
+    background: none !important
+
+  svg
+    transition: .35s all
+
+  .tox-icon
+    &.tox-tbtn__icon-wrap
+      svg
+        fill: $icon-default
+        &:hover
+          fill: $blue
+
+  .tox-collection--list
+    .tox-collection__group
+      &:nth-child(1)
+        border: $btn-outline
+        border-top-width: 2px !important
+
+  &.tox-tinymce
+    min-height: 100vh
+    background: $bg
+    .tox-tbtn
+      background: $white
+
+      /* Border
+      margin-bottom: 10px
+      border: 1px solid $border
+      box-sizing: border-box
+      border-radius: 4px
+      cursor: pointer
+      &.tox-tbtn--select.tox-tbtn--active
+        border: $btn-outline
+        &.tox-tbtn--bespoke
+          &.tox-tbtn--active
+            border: $btn-outline
+      .tox-collection--list
+        .tox-collection__group
+          &:first-child
+            border: $btn-outline
+            border-top-width: 2px!important
+
+    .tox-editor-container
+      display: flex
+      flex-direction: row-reverse
+      flex-wrap: nowrap
+      justify-content: center
+      align-content: stretch
+      align-items: flex-start
+
+  .tox-editor-header
+    order: 0
+    align-self: stretch
+    width: 240px
+    background: white
+    padding: 15px
+
+  .tox-sidebar-wrap
+    order: 0
+    flex: 0 1 auto
+    align-self: stretch
+
+  .tox-edit-area
+    justify-content: center
+
+  .tox-sidebar-wrap .tox-edit-area__iframe
+    max-width: 608px
+    max-height: 720px
+    width: 100%
+    height: 100%
+    margin: 40px 20px
+    background: $white
+    display: flex
+    padding: calc(30px - 1rem) calc(30px - 1rem) 30px
+
+  &.tox-tinymce .tox-toolbar__group .tox-tbtn
+    height: 40px
+    background: $white
+    border: 1px solid $border
+    box-sizing: border-box
+    border-radius: 4px
+    font-family: 'Fira Sans', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    display: flex
+    align-items: center
+    color: $font
+    justify-content: space-between
+    transition: .35s all
+    padding: 12px
+    .tox-tbtn__select-chevron
+      width: 11px
+    &:hover
+      .tox-tbtn__select-chevron
+        svg
+          fill: $icon-default
+
+  .tox-tbtn__select-label
+    cursor: pointer !important
+
+  .tox-tbtn--bespoke .tox-tbtn__select-label
+    font-family: 'Fira Sans', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    display: flex
+    align-items: center
+    color: $font
+
+  &.tox-tinymce
+    .tox-toolbar__group .tox-tbtn
+      &:nth-of-type(1), &:nth-of-type(3)
+        width: 100%
+
+      &:nth-of-type(2)
+        border-radius: 4px 0 0 4px
+        width: 66%
+
+      &:nth-of-type(3)
+        border-radius: 0 4px 4px 0
+        width: 34%
+      &:nth-of-type(4)
+        width: 50%
+        border-radius: 4px 0 0 4px
+      &:nth-of-type(5)
+        width: 50%
+        border-radius: 0 4px 4px 0
+      &:nth-of-type(6),&:nth-of-type(7),&:nth-of-type(8),&:nth-of-type(9)
+        width: 25%
+        margin-bottom: 15px
+        &.tox-tbtn--enabled
+          .tox-icon.tox-tbtn__icon-wrap
+            svg
+              fill: $blue
+        .tox-icon.tox-tbtn__icon-wrap
+          svg
+            fill: $icon
+            transition: .35s all
+            &:hover
+              fill: $blue
+      &:nth-of-type(7),&:nth-of-type(8)
+        border-radius: 0
+      &:nth-of-type(6)
+        border-radius: 4px 0 0 4px
+      &:nth-of-type(9)
+        border-radius: 0 4px 4px 0
+
+  /* save btn
+  &.tox-tinymce
+    .tox-toolbar__group
+      .tox-split-button
+        position: relative
+        width: 100%
+        margin-bottom: 10px
+        .tox-tbtn
+          &.tox-split-button__chevron
+            border-radius: 4px
+            &.tox-tbtn--enabled
+              border: $btn-outline
+            width: 99%
+            padding: 0
+            position: absolute
+            right: 2px
+            background: transparent
+            svg
+              right: 10px
+              position: absolute
+
+      .tox-tbtn
+        &:nth-last-of-type(1)
+          width: 100%
+          background: $green
+          border-radius: 4px
+          font-family: 'Fira Sans', sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 15px
+          line-height: 18px
+
+          /* identical to box height
+          color: $white
+          display: flex
+          justify-content: center
+          transition: .35s all
+          border: 2px solid $green
+
+          &:hover
+            color: $green
+            background: $white
+            border: 2px solid $green
+
+        &:nth-of-type(2) .tox-tbtn__select-chevron
+          color: $icon-default

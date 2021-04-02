@@ -52,7 +52,9 @@
     ]
   },
   "devDependencies": {
+    "@types/node-sass": "^4.11.1",
     "@types/react-select": "^4.0.13",
+    "node-sass": "^5.0.0",
     "prettier": "2.2.1"
   }
 }

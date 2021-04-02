@@ -3,7 +3,7 @@ import { Editor } from "@tinymce/tinymce-react";
 import { toast } from "react-toastify";
 import { addTextStyle, onSaveContent } from "./editorAdditionalFeatures";
 import initValue from "./initText.json";
-import "./style.css";
+import "./styles.sass";
 
 const REACT_APP_TINY_API_KEY = process.env.REACT_APP_TINY_API_KEY;
 
@@ -43,7 +43,7 @@ const TextEditor: React.FC = () => {
 
           // letter btn
           editor.ui.registry.addMenuButton("letterspace", {
-            text: "Letter space",
+            text: "Spacing",
             fetch: (callback) => {
               const items: object[] = letterSpaceList.map((i: number) =>
                 addTextStyle(i, editor, "letter-spacing", "px")
